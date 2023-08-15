@@ -12,7 +12,7 @@ app.get("/new",function(req,res){
     res.send("new also Worked");
 })
 app.use("/notes", noteRouter)
-mongoose.connect("mongodb+srv://admin:admin@cluster0.m7qftvs.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://admin:admin@cluster0.m7qftvs.mongodb.net/?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true })
 .then(()=>{
     console.log("Mongodb Connected successfully")
 })
