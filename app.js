@@ -14,7 +14,7 @@ app.get("/new",function(req,res){
 app.use("/notes", noteRouter)
 mongoose.connect("mongodb+srv://admin:admin@cluster0.m7qftvs.mongodb.net/?retryWrites=true&w=majority")
 .then(()=>{
- 
+    console.log("Mongodb Connected successfully")
 })
 .catch((error)=>{
     console.log(error)
